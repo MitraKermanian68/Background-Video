@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+
+        <video muted loop autoplay plays-inline id="backVideo">
+            <source src="./images/video.mp4" type="video/mp4">
+        </video>
+
+
+        <img src="./images/hamburger.png" class="menu-icon">
+
+        <div class="sidebar">
+            <div class="top-links">
+                <img src="./images/arrow.png" class="arrow-icon">
+                <div>
+                    <img src="./images/audio.png">
+                    <img src="./images/link.png">
+                </div>
+            </div>
+
+            <h1>Mitra Kermanian</h1>
+            <h3>Washington, USA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores rem omnis assumenda error debitis sit fuga placeat est tenetur facilis laborum odit, nam exercitationem, voluptas eos deleniti quidem voluptate.</p>
+
+            <a href="#">More Details</a>
+
+        </div>
+
+        <img src="./images/play.png" id="btn">
+    </div>
+
+
+    <script>
+        let backVideo = document.getElementById('backVideo');
+        let btn = document.getElementById('btn');
+
+        btn.onclick = function(){
+            backVideo.style.display = 'block';
+
+            if (backVideo.paused){
+                backVideo.play();
+                btn.src = "./images/pause.png";
+            }
+            else{
+                backVideo.pause();
+                btn.src = "./images/play.png";
+            }
+        }
+    </script>
+</body>
+</html>
